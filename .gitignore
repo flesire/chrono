@@ -28,7 +28,5 @@ proguard/
 *.iws
 .idea/
 .gradle
-/local.properties
-.idea
-*.iml
+
 .DS_Store

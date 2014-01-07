@@ -1,11 +1,9 @@
 package net.openmind.chrono;
 
 import android.app.Activity;
-import android.content.Loader;
-import android.media.AudioManager;
 import android.media.SoundPool;
-import android.os.SystemClock;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
@@ -27,6 +25,7 @@ public class Main extends Activity implements View.OnClickListener {
 
         ((Button) findViewById(R.id.start_button)).setOnClickListener(this);
         ((Button) findViewById(R.id.stop_button)).setOnClickListener(this);
+        ((Button) findViewById(R.id.reset_button)).setOnClickListener(this);
 
     }
 
@@ -39,6 +38,9 @@ public class Main extends Activity implements View.OnClickListener {
                 break;
             case R.id.stop_button:
                 chronometer.stop();
+                break;
+            case R.id.reset_button:
+                chronometer.setBase(SystemClock.elapsedRealtime());
                 break;
         }
     }
