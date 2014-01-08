@@ -2,11 +2,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="top|center">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chronometer Demo"
+        android:text="Running Chronometer"
         android:textSize="20sp"/>
     <LinearLayout
         android:layout_width="fill_parent"
@@ -23,17 +24,31 @@
             android:id="@+id/stop_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
-        <Button
-            android:text="RESET"
-            android:id="@+id/reset_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Walk"
+        android:textSize="20sp" />
+
     <Chronometer
-        android:id="@+id/chronometer"
+        android:id="@+id/chronometer1"
         android:format="%s"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="40sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run"
+        android:textSize="20sp" />
+
+    <Chronometer
+        android:id="@+id/chronometer2"
+        android:format="%s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp" />
 </LinearLayout>
